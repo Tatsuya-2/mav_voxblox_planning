@@ -329,7 +329,7 @@ void LocalPlanningBenchmark::addViewpointToMap(
 
   // Step 3: integrate into the map.
   // Transform back into camera frame.
-  voxblox::transformPointcloud(T_G_C.inverse(), ptcloud, &ptcloud_C);
+  voxblox::transformPointcloud(T_G_C.inverse(), ptcloud, ptcloud_C.get());
   esdf_server_.integratePointcloud(ros::Time::now(), T_G_C, ptcloud_C, colors);
 
   // Step 4: update mesh and ESDF. NewPoseCallback will mark unknown as
