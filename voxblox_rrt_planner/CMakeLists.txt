@@ -7,6 +7,9 @@ catkin_simple(ALL_DEPS_REQUIRED)
 
 add_definitions(-std=c++11)
 
+ADD_COMPILE_OPTIONS(-std=c++11 )
+ADD_COMPILE_OPTIONS(-std=c++14 )
+
 #############
 # LIBRARIES #
 #############
